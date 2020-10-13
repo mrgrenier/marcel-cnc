@@ -1,0 +1,39 @@
+# ==================================================================================================
+# ---               Custom PostGUI HAL File -                                                    ---
+# ---   The commands in this file are run after the AXIS GUI (including PyVCP panel) starts      ---
+# ==================================================================================================
+sets spindle-at-speed true
+# --------------------------------------------------------------------------------------------------
+# Newly Created Variable    	Internal halui signal			From custompanel (XML)
+# --------------------------------------------------------------------------------------------------
+# connect the X PyVCP buttons
+net panel-jog-x-minus		<= halui.axis.x.minus		<= pyvcp.x-minus
+net panel-jog-x-plus 		<= halui.axis.x.plus 		<= pyvcp.x-plus
+
+# connect the Y PyVCP buttons
+net panel-jog-y-minus 		<= halui.axis.y.minus 		<= pyvcp.y-minus
+net panel-jog-y-plus 		<= halui.axis.y.plus 		<= pyvcp.y-plus
+
+# connect the Z PyVCP buttons
+net panel-jog-z-minus 		<= halui.axis.z.minus 		<= pyvcp.z-minus
+net panel-jog-z-plus 		<= halui.axis.z.plus 		<= pyvcp.z-plus
+
+# connect the PyVCP jog speed slider
+net panel-jog-speed 		   halui.axis.jog-speed 		<= pyvcp.jog-speed-f
+
+# Setup Probe Indicator
+net probe-in                => pyvcp.probe-in
+
+# -----------------------------------------------------------------------------------
+# Set up CMD-xx buttons to run routines
+net panel-cmd-00 halui.mdi-command-00 <= pyvcp.cmd-00
+net panel-cmd-01 halui.mdi-command-01 <= pyvcp.cmd-01
+net panel-cmd-02 halui.mdi-command-02 <= pyvcp.cmd-02
+net panel-cmd-03 halui.mdi-command-03 <= pyvcp.cmd-03
+net panel-cmd-04 halui.mdi-command-04 <= pyvcp.cmd-04
+net panel-cmd-05 halui.mdi-command-05 <= pyvcp.cmd-05
+net panel-cmd-06 halui.mdi-command-06 <= pyvcp.cmd-06
+# -----------------------------------------------------------------------------------
+
+
+

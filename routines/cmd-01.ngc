@@ -1,0 +1,23 @@
+(cmd-01.ngc  Set default machine settings)
+
+O <cmd-01> sub
+G17    (Machine to XY Plane)
+G20    (Inch Mode)
+G40    (Cutter Compensation OFF)
+G49    (Cancel any tool length compensation)
+G54    (Use Coordinate system P1 G54 Default)
+G80    (Cancel canned cycles) 
+G90    (Absolute Movement Mode)
+G94    (Speed in Inches per minute)
+
+G91.1  (Arcs set to default units and method)
+G92.1  (Remove offsets)
+M5     (Stop Spindle)
+M9     (Stop Coolant)
+M48    (Allow Speed Override)
+
+G10 L20 P1 X0 Y0 Z0  (Set current location to ZERO)
+
+O <cmd-01> endsub
+
+M2

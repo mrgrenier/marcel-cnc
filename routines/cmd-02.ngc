@@ -1,0 +1,18 @@
+(cmd-02.ngc)
+
+O <cmd-02> sub
+
+O100 if [#32 EQ 0]
+  #32 = 1
+  #33 = 0
+  #31 = #<_z>
+  G0 Z1.5
+  G1 X[#<_x>-2.5987] Y[#<_y>+0.3834] F100
+  G1 Z[#31] F100 
+O100 else
+  (debug, Camera Set)
+O100 endif
+
+O <cmd-02> endsub
+
+M2

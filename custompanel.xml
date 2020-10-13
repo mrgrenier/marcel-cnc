@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pyvcp>
+  <tabs>
+    <names> ["MAIN","A"]</names>
+    <!-- ~~~ TOP OF TAB ~~~~~~~~~ TOP OF TAB ~~~~~~~~~ TOP OF TAB ~~~~~~~~~ TOP OF TAB ~~~ -->
+    <vbox>
+      <!-- ========================================================================= -->
+      <label>
+        <relief>RAISED</relief>
+        <bd>2</bd>
+        <text>"MAIN"</text>
+        <font>("Helvetica",8)</font>
+        <bg>"#000000"</bg>
+        <fg>"#ffffff"</fg>
+      </label>
+      <!-- ========================================================================= -->
+      <vbox>
+        <relief>RAISED</relief>
+        <bd>2</bd>
+        <scale>
+          <font>("Helvetica",8)</font>
+          <fg>"#000000"</fg>
+          <bg>"#BBBBBB"</bg>
+          <halpin>"jog-speed"</halpin>
+          <orient>HORIZONTAL</orient>
+          <resolution>1</resolution>
+          <initval>236</initval>
+          <min_>1</min_>
+          <max_>472</max_>
+        </scale>
+        <label>
+          <!-- the jog speed slider -->
+          <text>"Jog Speed"</text>
+          <font>("Helvetica",8)</font>
+          <fg>"#000000"</fg>
+          <bg>"#BBBBBB"</bg>
+        </label>
+      </vbox>
+      <!-- ========================================================================= -->
+      <hbox>
+        <!-- the X jog buttons -->
+        <relief>RAISED</relief>
+        <bd>2</bd>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"x-minus"</halpin>
+          <wraplength>"250"</wraplength>
+          <text>"X -\nLEFT"</text>
+          <bg>"#CCCCCC"</bg>
+        </button>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"x-plus"</halpin>
+          <text>"X +\nRIGHT"</text>
+          <wraplength>"250"</wraplength>
+          <bg>"#CCCCCC"</bg>
+        </button>
+      </hbox>
+      <!-- ========================================================================= -->
+      <hbox>
+        <!-- the Y jog buttons -->
+        <relief>RAISED</relief>
+        <bd>2</bd>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"y-minus"</halpin>
+          <text>"Y -\nFORWARD"</text>
+          <wraplength>"250"</wraplength>
+          <bg>"#CCCCCC"</bg>
+        </button>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"y-plus"</halpin>
+          <text>"Y +\nBACKWARD"</text>
+          <wraplength>"250"</wraplength>
+          <bg>"#CCCCCC"</bg>
+        </button>
+      </hbox>
+      <!-- ========================================================================= -->
+      <hbox>
+        <!-- the Z jog buttons -->
+        <relief>RAISED</relief>
+        <bd>2</bd>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"z-minus"</halpin>
+          <text>"Z -\nDOWN"</text>
+          <wraplength>"250"</wraplength>
+          <bg>"#CCCCCC"</bg>
+        </button>
+        <button>
+          <padx>9</padx>
+          <width>14</width>
+          <font>("Helvetica",8)</font>
+          <halpin>"z-plus"</halpin>
+          <text>"Z +\nUP"</text>
+          <wraplength>"250"</wraplength>
+          <bg>"#CCCCCC"</bg>
+        </button>
+      </hbox>
+    </vbox>
+    <!-- ~~~ END OF TAB ~~~~~~~~~ END OF TAB ~~~~~~~~~ END OF TAB ~~~~~~~~~ END OF TAB ~~~ -->
+  </tabs>
+  <!-- Probe LED -->
+  <vbox>
+    <hbox>
+      <led>
+        <halpin>"probe-in"</halpin>
+        <size>15</size>
+        <on_color>"green"</on_color>
+        <off_color>"red"</off_color>
+      </led>
+      <label>
+        <text>"Probe"</text>
+      </label>
+    </hbox>
+  </vbox>
+
+<!-- Control Buttons -->
+<vbox>
+<relief>RAISED</relief>
+<bd>3</bd>
+
+<button>
+<bg>"#F5DEB3"</bg>
+<font>("Helvetica",8)</font>
+<width>3</width>
+<halpin>"cmd-00"</halpin>
+<text>"GO HOME"</text>
+</button>
+
+<button>
+<bg>"#B0C4DE"</bg>
+<font>("Helvetica",8)</font>
+<width>3</width>
+<halpin>"cmd-01"</halpin>
+<text>"DEFAULT SETTINGS"</text>
+</button>
+
+<hbox>
+ <button>
+   <bg>"#75A6FE"</bg>
+   <font>("Helvetica",8)</font>
+   <width>3</width>
+   <halpin>"cmd-02"</halpin>
+   <text>"Camera X and Y"</text>
+ </button>
+ <button>
+   <bg>"#75A6FE"</bg>
+   <font>("Helvetica",8)</font>
+   <width>3</width>
+   <halpin>"cmd-03"</halpin>
+   <text>"Bit X and Y"</text>
+ </button>
+</hbox>
+
+<button>
+<bg>"#BC8F8F"</bg>
+<font>("Helvetica",8)</font>
+<width>3</width>
+<halpin>"cmd-04"</halpin>
+<text>"SPARE"</text>
+</button>
+
+<button>
+<bg>"#BC8F8F"</bg>
+<font>("Helvetica",8)</font>
+<width>3</width>
+<halpin>"cmd-05"</halpin>
+<text>"Probe Cube"</text>
+</button>
+
+<button>
+<bg>"#BC8F8F"</bg>
+<font>("Helvetica",8)</font>
+<width>3</width>
+<halpin>"cmd-06"</halpin>
+<text>"Touch Plate"</text>
+</button>
+
+</vbox>
+
+</pyvcp>
